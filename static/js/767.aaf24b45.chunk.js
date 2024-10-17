@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreactstudyblog=self.webpackChunkreactstudyblog||[]).push([[767],{767:(e,t,r)=>{r.r(t),r.d(t,{default:()=>h});var s=r(579);const h=function(){return(0,s.jsx)("div",{children:(0,s.jsx)("iframe",{src:"https://lukewire129.github.io",frameborder:"0",style:{width:"100vh",height:"100vh"}})})}}}]);
+//# sourceMappingURL=767.aaf24b45.chunk.js.map
