@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { socket } from "../utils/socket";
 import MarkdownPreview from "@uiw/react-markdown-preview";
+import "../css/common.css";
 
 function BlogViewerPage() {
   const location = useLocation();
@@ -21,10 +22,8 @@ function BlogViewerPage() {
     });
   }, []);
   return (
-    <div style={{ justifyContent: "center", display: "flex" }}>
-      <div style={{ width: "58.33333%", padding: ".75rem" }}>
-        <MarkdownPreview source={source} style={{ padding: 16 }} />;
-      </div>
+    <div className="main">
+      <MarkdownPreview source={source} style={{ padding: 16 }} />;
     </div>
   );
 }

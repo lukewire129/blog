@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { Routes, Route, BrowserRouter, Link } from "react-router-dom";
 import styled from "styled-components";
+import "./App.css";
 const MainPage = React.lazy(() => import("./pages/MainPage"));
 const BlogPage = React.lazy(() => import("./pages/BlogPage"));
 const AvaloniaPage = React.lazy(() => import("./pages/AvaloniaPage"));
@@ -11,11 +12,7 @@ const Header = styled.div`
   color: white;
   padding: 10px;
   text-align: center;
-`;
-
-const Main = styled.div`
-  background: #f9f9f9;
-  padding: 20px;
+  width: "100vw";
 `;
 
 const NaVul = styled.ul`
@@ -36,7 +33,7 @@ const Nava = styled(Link)`
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <div>
+      <div style={{ backgroundColor: "#fafafa" }}>
         <Header>
           <div
             style={{
@@ -48,24 +45,24 @@ function App() {
               lukewire` Blog
             </strong>
             <nav>
-              <NaVul>
-                <Navulli>
+              <ul>
+                <li>
                   <Nava to="/">홈</Nava>
-                </Navulli>
-                <Navulli>
+                </li>
+                <li>
                   <Nava to="/post">최근 포스트</Nava>
-                </Navulli>
-                <Navulli>
+                </li>
+                <li>
                   <Nava to="/">카테고리</Nava>
-                </Navulli>
-                <Navulli>
+                </li>
+                <li>
                   <Nava to="/">소개</Nava>
-                </Navulli>
-              </NaVul>
+                </li>
+              </ul>
             </nav>
           </div>
         </Header>
-        <Main>
+        <div>
           <Suspense fallback={<div>Loading....</div>}>
             <Routes>
               <Route exact path="/" element={<MainPage />}></Route>
@@ -74,7 +71,7 @@ function App() {
               <Route path="/postdetail" element={<BlogViewerPage />}></Route>
             </Routes>
           </Suspense>
-        </Main>
+        </div>
         <footer>
           <p>© 2024 내 개인 블로그. 모든 권리 보유.</p>
         </footer>

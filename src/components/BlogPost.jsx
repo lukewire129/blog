@@ -26,8 +26,19 @@ function timeAgo(date) {
     return `${seconds} second(s) ago`;
   }
 }
+
+const BlogCard = styled.div`
+  background-color: #ffffff;
+  /* 카드 배경색 */
+  border: 1px solid #d1d1d1;
+  /* 카드 경계선 추가 */
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* 카드 그림자 효과 */
+  padding: 40px;
+`;
 const LinkItem = styled(Link)`
-  color: gray;
+  color: #007acc;
   font-size: 24px;
   text-decoration: none;
   cursor: pointer;
@@ -36,14 +47,13 @@ function BlogPost(props) {
   const { data } = props;
 
   return (
-    <div style={{ minWidth: "769px", justifyContent: "center" }}>
+    <BlogCard>
       <LinkItem to="/postdetail" state={{ data: data.path }}>
         {data.metadata.title}
       </LinkItem>
       <p style={{ fontSize: "18px" }}>{timeAgo(data.metadata.date)}</p>
       <p style={{ fontSize: "18px" }}>{data.metadata.subtitle}</p>
-      <hr style={{ background: "#f5f5f5", height: "1px", border: "0" }} />
-    </div>
+    </BlogCard>
   );
 }
 

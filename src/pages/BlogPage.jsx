@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { socket } from "../utils/socket";
 import BlogList from "../components/BlogList";
-
+import "../css/common.css";
 function BlogPage() {
   const [post, setPost] = useState([]);
   useEffect(() => {
@@ -16,7 +16,7 @@ function BlogPage() {
     });
   }, []);
   return (
-    <div style={{ justifyContent: "center", display: "flex" }}>
+    <div className="main">
       <BlogList post={post} />
     </div>
   );
