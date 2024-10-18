@@ -1,38 +1,84 @@
 import React, { Suspense } from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, Link } from "react-router-dom";
 import styled from "styled-components";
-const HomePage = React.lazy(() => import("./pages/HomePage"));
+const MainPage = React.lazy(() => import("./pages/MainPage"));
+const BlogPage = React.lazy(() => import("./pages/BlogPage"));
 const AvaloniaPage = React.lazy(() => import("./pages/AvaloniaPage"));
+const BlogViewerPage = React.lazy(() => import("./pages/BlogViewerPage"));
+
+const Header = styled.div`
+  background-color: #f0f4f8;
+  color: white;
+  padding: 10px;
+  text-align: center;
+`;
+
 const Main = styled.div`
-  display: grid;
-  height: 100vh;
-  grid-template-rows: auto 1fr;
-  background: #fafafa;
+  background: #f9f9f9;
+  padding: 20px;
 `;
 
-const Center = styled.div`
-  background: #fafafa;
+const NaVul = styled.ul`
+  list-style-type: none;
+  padding: 0;
 `;
-
-const TopMenu = styled.div`
-  background-color: #172d3c;
-  height: 70px;
+const Navulli = styled.li`
+  display: inline;
+  margin: 0 10px;
+`;
+const Nava = styled(Link)`
+  color: #007acc;
+  font-size: 24px;
+  text-decoration: none;
+  cursor: pointer;
 `;
 
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Main>
-        <TopMenu />
-        <Center>
+      <div>
+        <Header>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <strong style={{ color: "black", fontSize: "24px" }}>
+              lukewire` Blog
+            </strong>
+            <nav>
+              <NaVul>
+                <Navulli>
+                  <Nava to="/">홈</Nava>
+                </Navulli>
+                <Navulli>
+                  <Nava to="/post">최근 포스트</Nava>
+                </Navulli>
+                <Navulli>
+                  <Nava to="/">카테고리</Nava>
+                </Navulli>
+                <Navulli>
+                  <Nava to="/">소개</Nava>
+                </Navulli>
+              </NaVul>
+            </nav>
+          </div>
+        </Header>
+        <Main>
           <Suspense fallback={<div>Loading....</div>}>
             <Routes>
-              <Route index element={<HomePage />}></Route>
-              <Route path="avalonia" element={<AvaloniaPage />}></Route>
+              <Route exact path="/" element={<MainPage />}></Route>
+              <Route path="/avalonia" element={<AvaloniaPage />}></Route>
+              <Route path="/post" element={<BlogPage />}></Route>
+              <Route path="/postdetail" element={<BlogViewerPage />}></Route>
             </Routes>
           </Suspense>
-        </Center>
-      </Main>
+        </Main>
+        <footer>
+          <p>© 2024 내 개인 블로그. 모든 권리 보유.</p>
+        </footer>
+      </div>
     </BrowserRouter>
   );
 }
