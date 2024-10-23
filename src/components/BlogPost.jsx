@@ -28,6 +28,7 @@ function timeAgo(date) {
 }
 
 const BlogCard = styled.div`
+  max-width: 900px;
   background-color: #ffffff;
   /* 카드 배경색 */
   border: 1px solid #d1d1d1;

@@ -1,22 +1,37 @@
-.main {
-    max-width: 400px;
-    /* 카드 가로 최대 크기를 300px로 설정 */
-    margin: 0 auto;
-    /* 중앙 정렬 */
+#mainpanel {
     padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px; 
+    justify-content: center;
+        /* 가로 가운데 정렬 */
 }
+#main{
+    margin-left: 280px;
+    max-width: 900px;
+}
+#sidebarArea {
+    width: 400px;
+}
+@media screen and (max-width: 1199px) {
+    #main {
+        width: 100%;
+        margin-left: 0px;
+    }
 
-/* 큰 화면에서는 카드의 가로폭을 더 크게 할 수 있습니다 */
-@media (min-width: 768px) {
-    .main {
-        max-width: 1200px;
-        /* 예시: 큰 화면에서 카드 가로폭을 600px로 설정 */
+    #sidebarArea {
+        display: none;
+        /* 화면에서 아예 제거 */
     }
 }
 
-/* 화면이 작은 경우에는 카드 레이아웃을 100%로 확장 */
-@media (max-width: 768px) {
-    .main {
-        width: 100%;
+@media screen and (min-width: 1200px) {
+    #main {
+        max-width: 700px;
+    }
+
+    #sidebarArea {
+        display: block;
+        /* 사이드바를 보이도록 설정 */
     }
 }

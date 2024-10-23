@@ -21,11 +21,7 @@ function BlogViewerPage() {
       setSource(result);
     });
   }, []);
-  return (
-    <div className="main">
-      <MarkdownPreview source={source} style={{ padding: 16 }} />;
-    </div>
-  );
+  return <MarkdownPreview source={source} style={{ padding: 16 }} />;
 }
 
 export default BlogViewerPage;

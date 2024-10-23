@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import "../css/MainPage.css";
 const Tags = styled(Link)`
   color: gray;
   font-size: 13px;
@@ -10,7 +11,11 @@ const Tags = styled(Link)`
   border-radius: 10px;
   margin: 5px;
 `;
-
+const Nava = styled(Link)`
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+`;
 const SidebarPanel = styled.div`
   padding: 20px;
   background: #ffffff;
@@ -18,25 +23,41 @@ const SidebarPanel = styled.div`
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
+
 function Sidebar(props) {
   const { tags, category } = props;
   return (
     <SidebarPanel>
-      <div class="card">
+      <div className="card">
         <h2>카테고리</h2>
         <ul>
           <li>
-            <a href="#">기술</a>
+            <Nava
+              to="/search"
+              state={{
+                type: 0,
+                data: category.find(
+                  (item) => item.categoryname === "technology"
+                ),
+              }}
+            >
+              기술
+            </Nava>
           </li>
           <li>
-            <a href="#">일상</a>
-          </li>
-          <li>
-            <a href="#">리뷰</a>
+            <Nava
+              to="/search"
+              state={{
+                type: 0,
+                data: category.find((item) => item.categoryname === "review"),
+              }}
+            >
+              리뷰
+            </Nava>
           </li>
         </ul>
       </div>
-      <div class="card">
+      <div className="card">
         <h2>기타 리소스</h2>
         <ul>
           <li>
@@ -46,14 +67,14 @@ function Sidebar(props) {
           </li>
         </ul>
       </div>
-      <div class="card">
+      <div className="card">
         <h2>연락처</h2>
-        <ul class="social-links">
+        <ul className="social-links">
           <li>
             <a
               href="mailto:lukewire129@gmail.com"
               aria-label="이메일"
-              class="email"
+              className="email"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +90,7 @@ function Sidebar(props) {
             <a
               href="https://x.com/lukewire129"
               aria-label="트위터"
-              class="twitter"
+              className="twitter"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +106,7 @@ function Sidebar(props) {
             <a
               href="https://linkedin.com/in/lukewire129"
               aria-label="링크드인"
-              class="linkedin"
+              className="linkedin"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +122,7 @@ function Sidebar(props) {
             <a
               href="https://facebook.com/lukewire129"
               aria-label="페이스북"
-              class="facebook"
+              className="facebook"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +138,7 @@ function Sidebar(props) {
             <a
               href="https://instagram.com/lukewire129"
               aria-label="인스타그램"
-              class="instagram"
+              className="instagram"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +154,7 @@ function Sidebar(props) {
             <a
               href="https://github.com/lukewire129"
               aria-label="깃허브"
-              class="github"
+              className="github"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -163,3 +184,44 @@ function Sidebar(props) {
 }
 
 export default Sidebar;
+
+//  <div class="card">
+//           <h2>기타 리소스</h2>
+//           <ul>
+//             <li>
+//               <LinkItem to="/avalonia">아발로니아 샘플</LinkItem>
+//               <p>
+//                 아발로니아에서 구현한 다양한 컨트롤과 테마를 확인할 수 있습니다.
+//               </p>
+//             </li>
+//             {/* <li>
+//             <a href="https://example.com/unoblazor-samples">
+//               우노 블레이저 샘플
+//             </a>
+//             <p>우노 블레이저를 활용한 여러 프로젝트와 예제를 볼 수 있습니다.</p>
+//           </li>
+//           <li>
+//             <a href="https://example.com/blazor-samples">블레이저 샘플</a>
+//             <p>블레이저 프레임워크로 만든 애플리케이션 샘플입니다.</p>
+//           </li> */}
+//           </ul>
+//         </div>
+//         {/* <div class="card">
+//         <h2>유용한 튜토리얼</h2>
+//         <ul>
+//           <li>
+//             <a href="https://example.com/tutorials/avalonia">
+//               아발로니아 튜토리얼
+//             </a>
+//           </li>
+//           <li>
+//             <a href="https://example.com/tutorials/unoblazor">
+//               우노 블레이저 튜토리얼
+//             </a>
+//           </li>
+//           <li>
+//             <a href="https://example.com/tutorials/blazor">블레이저 튜토리얼</a>
+//           </li>
+//         </ul>
+//       </div> */}
+//       </div>
