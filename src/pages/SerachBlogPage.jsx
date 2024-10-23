@@ -12,7 +12,10 @@ function SerachBlogPage() {
   }, [state]);
   return (
     <div>
-      {state.data.categoryname}
+      <div>
+        검색 결과 :{" "}
+        {state.type === 0 ? state.data.categoryname : state.data.tagname}
+      </div>
       <BlogList post={state.data.blogs} />;
     </div>
   );

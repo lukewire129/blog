@@ -173,7 +173,13 @@ function Sidebar(props) {
         {tags &&
           tags.map((item) => {
             return (
-              <Tags to="/postdetail" state={{ data: item.blogs }}>
+              <Tags
+                to="/search"
+                state={{
+                  type: 1,
+                  data: item,
+                }}
+              >
                 {item.tagname}
               </Tags>
             );
