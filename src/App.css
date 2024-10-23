@@ -1,10 +1,97 @@
+header {
+  background: #f0f4f8;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
 
-nav ul {
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav ul {
   list-style: none;
   padding: 0;
 }
 
-nav ul li {
+.nav ul li {
   display: inline;
   margin: 0 15px;
+}
+
+.nav input[type="text"] {
+  padding: 5px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
+.email {
+  background-color: #f44336;
+  /* Gmail Red */
+}
+
+.twitter {
+  background-color: #1DA1F2;
+  /* Twitter Blue */
+}
+
+.linkedin {
+  background-color: #0077B5;
+  /* LinkedIn Blue */
+}
+
+.facebook {
+  background-color: #4267B2;
+  /* Facebook Blue */
+}
+
+.instagram {
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134B8, #515BD4);
+  /* Instagram Gradient */
+  color: white;
+  /* 아이콘 색상 */
+}
+
+.github {
+  background-color: #333;
+  /* GitHub Black */
+  color: white;
+  /* 아이콘 색상 */
+}
+
+svg {
+  fill: white;
+  /* 아이콘 색상 */
+  width: 24px;
+  height: 24px;
 }
