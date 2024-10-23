@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreactstudyblog=self.webpackChunkreactstudyblog||[]).push([[767],{767:(e,t,r)=>{r.r(t),r.d(t,{default:()=>l});var s=r(579);const l=function(){return(0,s.jsx)("div",{children:(0,s.jsx)("iframe",{src:"https://delightful-profiterole-0fa25d.netlify.app/",frameborder:"0",style:{width:"100vw",height:"100vh"}})})}}}]);
-//# sourceMappingURL=767.e51d8242.chunk.js.map
