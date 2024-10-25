@@ -16,5 +16,5 @@
 `;const c=function(t){const{data:a}=t;return(0,s.jsxs)(d,{children:[(0,s.jsx)(i,{to:"/postdetail",state:{data:a.path},children:a.metadata.title}),(0,s.jsx)("p",{style:{fontSize:"18px"},children:r(a.metadata.date)}),(0,s.jsx)("p",{style:{fontSize:"18px"},children:a.metadata.subtitle})]})};const l=n.Ay.div`
   display: grid;
   gap: 20px;
-`;const u=function(t){const{post:a}=t;return(0,s.jsx)(l,{children:a&&a.map((t=>function(t){for(let a in t)return!1;return!0}(t.metadata)?null:(0,s.jsx)(c,{data:t})))})}},306:(t,a,o)=>{o.r(a),o.d(a,{default:()=>d});var e=o(216),n=o(676),s=(o(468),o(43)),r=o(579);const d=function(){const t=(0,e.zy)().state;return(0,s.useEffect)((()=>{0===t.type&&console.log(t.data.blogs)}),[t]),(0,r.jsxs)("div",{children:[(0,r.jsxs)("div",{children:["\uac80\uc0c9 \uacb0\uacfc :"," ",0===t.type?t.data.categoryname:t.data.tagname]}),(0,r.jsx)(n.A,{post:t.data.blogs}),";"]})}}}]);
-//# sourceMappingURL=306.fccd3054.chunk.js.map
+`;const u=function(t){const{post:a}=t;return(0,s.jsx)(l,{children:a&&a.map((t=>function(t){for(let a in t)return!1;return!0}(t.metadata)?null:(0,s.jsx)(c,{data:t})))})}},306:(t,a,o)=>{o.r(a),o.d(a,{default:()=>d});var e=o(216),n=o(676),s=(o(468),o(43)),r=o(579);const d=function(){const t=(0,e.zy)().state;return(0,s.useEffect)((()=>{0===t.type&&console.log(t.data.blogs)}),[t]),(0,r.jsxs)("div",{children:[(0,r.jsxs)("div",{children:["\uac80\uc0c9 \uacb0\uacfc :"," ",0===t.type?t.data.categoryname:t.data.tagname]}),(0,r.jsx)(n.A,{post:t.data.blogs})]})}}}]);
+//# sourceMappingURL=306.de0358ce.chunk.js.map
