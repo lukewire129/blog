@@ -16,7 +16,7 @@ function SerachBlogPage() {
         검색 결과 :{" "}
         {state.type === 0 ? state.data.categoryname : state.data.tagname}
       </div>
-      <BlogList post={state.data.blogs} />;
+      <BlogList post={state.data.blogs} />
     </div>
   );
 }

@@ -14,14 +14,22 @@ function BlogViewerPage() {
       var re = data.replace(/^---[\s\S]*?---\s*/, "");
       var result = re.replace(
         /!\[alt text\]\(([^https:\/\/].*?)\)/g,
-        `![alt text](https://lukewire129.github.io/data/${path
-          .replace("README.md", "")
-          .replace(" ", "%20")}/$1)`
+        `\n![alt text](https://lukewire129.github.io/data/${path
+          .replace(/\/README.*\.md$/, "")
+          .replace(" ", "%20")}/$1)\n`
       );
       setSource(result);
     });
   }, []);
-  return <MarkdownPreview source={source} style={{ padding: 16 }} />;
+  return (
+    <MarkdownPreview
+      source={source}
+      style={{
+        padding: "50px 30px",
+        border: "1px solid #cccccc",
+      }}
+    />
+  );
 }
 
 export default BlogViewerPage;

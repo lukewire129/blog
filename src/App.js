@@ -41,7 +41,7 @@ function App() {
       <div style={{ backgroundColor: "#fafafa" }}>
         <div className="header">
           <div class="logo" style={{ marginBottom: "10px" }}>
-            <strong style={{ color: "black", fontSize: "24px" }}>
+            <strong style={{ color: "white", fontSize: "24px" }}>
               lukewire` Blog
             </strong>
           </div>

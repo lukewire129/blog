@@ -1,7 +1,7 @@
-header {
-  background: #f0f4f8;
+.header {
+  background: #323847;
   color: #fff;
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: center;
 }
 

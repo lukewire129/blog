@@ -7,7 +7,6 @@ function MainPage() {
   useEffect(() => {
     socket.get("/recentblogs.json").then((response) => {
       const { code, data } = response;
-      console.log(data);
       setPost(
         data.files.sort(
           (a, b) => new Date(b.metadata.date) - new Date(a.metadata.date)
