@@ -46,10 +46,14 @@ const LinkItem = styled(Link)`
 `;
 function BlogPost(props) {
   const { data } = props;
-
+  const category = data.path.split("/")[1];
+  const title = data.path.split("/")[2];
+  const name = data.path.split("/")[3];
   return (
     <BlogCard>
-      <LinkItem to="/postdetail" state={{ data: data.path }}>
+      <LinkItem
+        to={`/postdetail?category=${category}&title=${title}&name=${name}`}
+      >
         {data.metadata.title}
       </LinkItem>
       <p style={{ fontSize: "18px" }}>{timeAgo(data.metadata.date)}</p>
