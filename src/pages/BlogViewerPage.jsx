@@ -27,7 +27,16 @@ function BlogViewerPage() {
       setSource(result);
     });
   }, [searchParams]);
-  return <MarkdownPreview source={source} style={{ padding: 16 }} />;
+  return (
+    <MarkdownPreview
+      source={source}
+      style={{
+        padding: "50px 30px 10px 30px",
+        border: "1px solid #cccccc",
+        fontSize: "13px",
+      }}
+    />
+  );
 }
 
 export default BlogViewerPage;
