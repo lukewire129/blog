@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreactstudyblog=self.webpackChunkreactstudyblog||[]).push([[599],{599:(e,t,s)=>{s.r(t),s.d(t,{default:()=>o});var c=s(43),u=s(136),r=s(795),a=s(579);const o=function(){const[e,t]=(0,c.useState)("");return(0,c.useEffect)((()=>{u.s.get("https://lukewire129.github.io/lukewire129/README_KR.md").then((e=>{const{code:s,data:c}=e;var u=c.replace(/^---[\s\S]*?---\s*/,"");t(u)}))}),[]),(0,a.jsx)(r.A,{source:e,style:{padding:"50px 30px 50px 30px",border:"1px solid #cccccc",fontSize:"13px"}})}}}]);
+//# sourceMappingURL=599.8709db3a.chunk.js.map
