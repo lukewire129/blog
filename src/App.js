@@ -59,7 +59,21 @@ function App() {
         </div>
         <div id="mainpanel">
           <div id="main">
-            <Suspense fallback={<div>Loading....</div>}>
+            <Suspense
+              fallback={
+                <div
+                  style={{
+                    color: "white",
+                    padding: "50px 30px 50px 30px",
+                    border: "1px solid #cccccc",
+                    width: "698px",
+                    heigh: "800px",
+                  }}
+                >
+                  Loading....
+                </div>
+              }
+            >
               <Routes>
                 <Route path="/" element={<MainPage />}></Route>
                 <Route path="/search" element={<SerachBlogPage />}></Route>
