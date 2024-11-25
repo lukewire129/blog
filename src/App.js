@@ -8,6 +8,7 @@ import "./App.css";
 const MainPage = React.lazy(() => import("./pages/MainPage"));
 const SerachBlogPage = React.lazy(() => import("./pages/SerachBlogPage"));
 const BlogViewerPage = React.lazy(() => import("./pages/BlogViewerPage"));
+const AboutPage = React.lazy(() => import("./pages/AboutPage"));
 function isEmpty(obj) {
   for (let key in obj) {
     return false;
@@ -15,7 +16,7 @@ function isEmpty(obj) {
   return true;
 }
 const Nava = styled(Link)`
-  color: #007acc;
+  color: #ffd700;
   font-size: 24px;
   text-decoration: none;
   cursor: pointer;
@@ -42,7 +43,7 @@ function App() {
         <div className="header">
           <div class="logo" style={{ marginBottom: "10px" }}>
             <strong style={{ color: "white", fontSize: "24px" }}>
-              lukewire` Blog
+              Lukewire Devlog
             </strong>
           </div>
           <div className="nav">
@@ -51,10 +52,7 @@ function App() {
                 <Nava to="/">Home</Nava>
               </li>
               <li>
-                <Nava to="/">Catecory</Nava>
-              </li>
-              <li>
-                <Nava to="/">About</Nava>
+                <Nava to="/about">About</Nava>
               </li>
             </ul>
           </div>
@@ -66,6 +64,7 @@ function App() {
                 <Route path="/" element={<MainPage />}></Route>
                 <Route path="/search" element={<SerachBlogPage />}></Route>
                 <Route path="/postdetail" element={<BlogViewerPage />}></Route>
+                <Route path="/about" element={<AboutPage />}></Route>
               </Routes>
             </Suspense>
           </div>

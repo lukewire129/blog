@@ -13,7 +13,6 @@ function BlogViewerPage() {
     const title = searchParams.get("title");
     const name = searchParams.get("name");
     const path = `_posts/${category}/${title}`;
-    console.log(`${path}/${name}`);
     socket.get(`${path}/${name}`).then((response) => {
       const { code, data } = response;
       var re = data.replace(/^---[\s\S]*?---\s*/, "");
@@ -31,7 +30,7 @@ function BlogViewerPage() {
     <MarkdownPreview
       source={source}
       style={{
-        padding: "50px 30px 10px 30px",
+        padding: "50px 30px 50px 30px",
         border: "1px solid #cccccc",
         fontSize: "13px",
       }}
